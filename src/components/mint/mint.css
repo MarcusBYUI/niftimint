@@ -1,0 +1,22 @@
+.MintButton {
+  justify-content: center;
+  display: flex;
+  margin-top: 400px;
+}
+
+.MintButton button {
+  margin-left: 15px;
+  width: 170px;
+  padding: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: rgb(42, 110, 246);
+  color: white;
+  cursor: pointer;
+}
+
+.MintButton button:active,
+.MintButton button:hover {
+  color: rgb(42, 110, 246);
+  background-color: white;
+}
