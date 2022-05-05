@@ -40,7 +40,10 @@ const Mint = () => {
         fee = 0.25;
         cid = morerand();
       }
-      const valueFee = { value: ethers.utils.parseEther(`${fee}`) };
+      const valueFee = {
+        value: ethers.utils.parseEther(`${fee}`),
+        gasLimit: 30000,
+      };
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(niftiContract, abi, signer);
