@@ -4,7 +4,7 @@ import abi from "../abi.json";
 import "./mint.css";
 
 const Mint = () => {
-  const niftiContract = "0xbca993aa01Fa225Ed4A1CFE23a77C596bF433548";
+  const niftiContract = "0xCE46A2d831744AfAD9E449Fc56789C0C092D8173";
   const mintCID = "ipfs://QmZXY6aEE7J9RvncuCzyKCVfaPnzTcQ5Pgj6Pi5ueHLPqW/";
 
   const randgen = () => {
@@ -40,7 +40,10 @@ const Mint = () => {
         fee = 0.25;
         cid = morerand();
       }
-      const valueFee = { value: ethers.utils.parseEther(`${fee}`) };
+      const valueFee = {
+        value: ethers.utils.parseEther(`${fee}`),
+        gasLimit: 30000,
+      };
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(niftiContract, abi, signer);
