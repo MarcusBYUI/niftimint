@@ -2,9 +2,9 @@ import React from "react";
 import { ethers, BigNumber } from "ethers";
 import abi from "../abi.json";
 import "./mint.css";
-
+import Animation from "./Floating-NiFTis.gif";
 const Mint = () => {
-  const niftiContract = "0xbca993aa01Fa225Ed4A1CFE23a77C596bF433548";
+  const niftiContract = "0xCE46A2d831744AfAD9E449Fc56789C0C092D8173";
   const mintCID = "ipfs://QmZXY6aEE7J9RvncuCzyKCVfaPnzTcQ5Pgj6Pi5ueHLPqW/";
 
   const randgen = () => {
@@ -58,12 +58,25 @@ const Mint = () => {
     }
   };
   return (
-    <>
-      <div className="MintButton">
-        <button onClick={() => handleMint(1)}>Mint 1 NIFTI @ 0.1BNB</button>
-        <button onClick={() => handleMint(3)}>Mint 3 NIFTI @ 0.25BNB</button>
+    <div style={{ position: "relative" }}>
+      <img className="animation" src={Animation} />
+      <div className="description_container">
+        <h2>Mint Your Niftis</h2>
+        <p>
+          Own one of the 8,888 unique gensis montas, gensis monstas will be the
+          only NFT available for staking $Monsta, All Monstaeggs will be hacthed
+          and reveal post launch
+        </p>
       </div>
-    </>
+      <div className="MintButtonContainer">
+        <button className="MintButton" onClick={() => handleMint(1)}>
+          <span>Mint 1 NIFTI</span>
+        </button>
+        <button className="MintButton" onClick={() => handleMint(3)}>
+          <span>Mint 3 NIFTI</span>
+        </button>
+      </div>
+    </div>
   );
 };
 
