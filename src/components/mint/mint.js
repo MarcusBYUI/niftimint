@@ -42,7 +42,7 @@ const Mint = () => {
       }
       const valueFee = {
         value: ethers.utils.parseEther(`${fee}`),
-        gasLimit: 300000,
+        gasLimit: 800000,
       };
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
