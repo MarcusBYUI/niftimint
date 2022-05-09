@@ -4,7 +4,7 @@ import abi from "../abi.json";
 import "./mint.css";
 import Animation from "./Floating-NiFTis.gif";
 const Mint = () => {
-  const niftiContract = "0xCE46A2d831744AfAD9E449Fc56789C0C092D8173";
+  const niftiContract = "0x88570B2d2F6122cFb28C1A85AA6a26243BeF4fbE";
   const mintCID = "ipfs://QmZXY6aEE7J9RvncuCzyKCVfaPnzTcQ5Pgj6Pi5ueHLPqW/";
 
   const randgen = () => {
